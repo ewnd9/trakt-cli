@@ -1,6 +1,6 @@
 {
   "name": "trakt-cli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "access trakt from CLI",
   "main": "dist/index.js",
   "scripts": {
