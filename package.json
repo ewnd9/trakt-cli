@@ -29,6 +29,7 @@
   "author": "ewnd9 <ewndnine@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^1.1.1",
     "inquirer-credentials": "^2.0.0",
     "show-episode-format": "^1.0.1",
     "trakt-utils": "^0.3.0",

@@ -65,6 +65,8 @@ credentials('.trakt-cli', [pin])
 
     if (cli.flags.available) {
       return task('./available');
+    } else if (cli.flags.report) {
+      return task('./report');
     } else if (cli.input.length > 0) {
       return task('./search');
     } else {
