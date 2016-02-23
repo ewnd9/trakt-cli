@@ -17,6 +17,9 @@
   "bin": {
     "trakt": "./cli.js"
   },
+  "engines": {
+    "node": ">=4.0" 
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ewnd9/trakt-cli.git"
@@ -30,7 +33,9 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.1",
+    "inquirer-bluebird": "^1.0.6",
     "inquirer-credentials": "^2.0.0",
+    "meow": "^3.7.0",
     "show-episode-format": "^1.0.1",
     "trakt-utils": "^0.3.0",
     "update-notifier": "^0.6.0"
