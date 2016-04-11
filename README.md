@@ -21,6 +21,7 @@ $ trakt --help
   $ trakt --available
   $ trakt --available --json
   $ trakt --report
+  $ trakt --full
 ```
 
 ## Examples

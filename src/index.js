@@ -11,6 +11,8 @@ const cli = meow({
     $ trakt <show-title>
     $ trakt --available
     $ trakt --available --json
+    $ trakt --report
+    $ trakt --full
   `,
   pkg: '../package.json'
 });
@@ -67,6 +69,8 @@ credentials('.trakt-cli', [pin])
       return task('./available');
     } else if (cli.flags.report) {
       return task('./report');
+    } else if (cli.flags.full) {
+      return task('./full');
     } else if (cli.input.length > 0) {
       return task('./search');
     } else {

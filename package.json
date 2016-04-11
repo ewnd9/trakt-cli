@@ -33,9 +33,12 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.1",
+    "configstore": "^2.0.0",
+    "hasha": "^2.2.0",
     "inquirer-bluebird": "^1.0.6",
     "inquirer-credentials": "^2.0.0",
     "meow": "^3.7.0",
+    "ora": "^0.2.1",
     "show-episode-format": "^1.0.1",
     "trakt-utils": "^0.3.0",
     "update-notifier": "^0.6.0"
