@@ -1,8 +1,6 @@
-const meow = require('meow');
-const credentials = require('inquirer-credentials');
-const inquirer = require('inquirer-bluebird');
-const Trakt = require('trakt-utils');
-const format = require('show-episode-format');
+import meow from 'meow';
+import credentials from 'inquirer-credentials';
+import Trakt from 'trakt-utils';
 
 const cli = meow({
   help: `

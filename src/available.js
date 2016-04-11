@@ -1,9 +1,6 @@
-import inquirer from 'inquirer-bluebird';
 import { formatEpisodeRelease as fmt } from 'show-episode-format';
 
 export default (trakt, query, flags) => {
-  let show;
-
   return trakt
     .getReport()
     .then(report => {

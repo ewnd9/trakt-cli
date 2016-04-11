@@ -13,7 +13,7 @@ const UNAIRED = 'UNAIRED';
 const conf = new Configstore('trakt-cli');
 const print = console.log.bind(console);
 
-export default (trakt, query, flags) => {
+export default trakt => {
   const spinner = ora('Loading history');
   spinner.start();
 
@@ -101,14 +101,14 @@ export default (trakt, query, flags) => {
     }
 
     return result;
-  };
+  }
 
   function flatEpisodes(seasons) {
     return _.flatten(seasons.map(s => s.episodes.map(ep => {
       ep.season = s.number;
       return ep;
     }))).filter(ep => ep.season > 0);
-  };
+  }
 
   function fetchShowInfo(show) {
     const showSlug = show.show.ids.slug;
@@ -131,7 +131,7 @@ export default (trakt, query, flags) => {
         result.episodesSeasons = episodesSeasons;
         return result;
       });
-  };
+  }
 
   function printReport(report) {
     print();
@@ -172,7 +172,7 @@ export default (trakt, query, flags) => {
             } else {
               return withFirstEpisodeDate(`${fmt(series[0])}-${fmt(series[series.length - 1])}`);
             }
-          };
+          }
 
           print(`${show.title} (${show.status})`);
 
@@ -198,6 +198,6 @@ export default (trakt, query, flags) => {
           print();
         });
       }
-    })
+    });
   }
 };

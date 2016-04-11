@@ -2,7 +2,7 @@ import { formatEpisode as fmt, formatSeries } from 'show-episode-format';
 import moment from 'moment';
 import chalk from 'chalk';
 
-export default (trakt, query, flags) => {
+export default trakt => {
   return trakt
     .getReport(60)
     .then(report => report.filter(_ => _.length > 0).forEach(printGroup))
@@ -11,7 +11,7 @@ export default (trakt, query, flags) => {
   function printGroup(group) {
     console.log();
     group.forEach(printShows);
-  };
+  }
 
   function printShows({ show, report }) {
     const titles = [];
@@ -35,7 +35,7 @@ export default (trakt, query, flags) => {
         );
 
         if (length === 1) {
-          titles.push(`${fmt(report.episodes[0].episode)} in ${awaiting}`)
+          titles.push(`${fmt(report.episodes[0].episode)} in ${awaiting}`);
         } else {
           titles.push(`${formatInterval(report.episodes)} every week in ${awaiting}`);
         }
@@ -43,12 +43,12 @@ export default (trakt, query, flags) => {
     }
 
     console.log(chalk.underline(show), titles.join(', '));
-  };
+  }
 
   function formatInterval(data) {
     const episodes = data.map(_ => _.episode);
     return formatSeries(episodes).map(group => {
       return group.length === 1 ? fmt(group[0]) : `${fmt(group[0])}-${fmt(group[group.length - 1])}`;
     }).join(', ');
-  };
+  }
 };
