@@ -144,7 +144,8 @@ export default (trakt, query, flags) => {
       if (reportType === WATCHED) {
         shows.forEach(show => {
           print(`${show.title} (${show.status})`);
-        })
+        });
+        print();
       } else {
         shows.forEach(show => {
           const fullSeasons = show.fullSeasons;

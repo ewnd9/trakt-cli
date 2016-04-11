@@ -44,6 +44,12 @@ Man Seeking Woman 02x01-02x05 available, 02x06-02x10 every week in 2 days (Thu)
 
 ```
 
+### `$ trakt --full`
+
+Red is yet unaired, green is aired and not watched, white is watched.
+
+![Demonstration](/demo/full-demo.png?raw=true)
+
 
 ## License
 
