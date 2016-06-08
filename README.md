@@ -21,7 +21,8 @@ $ trakt --help
   $ trakt --available
   $ trakt --available --json
   $ trakt --report
-  $ trakt --full
+  $ trakt --shows
+  $ trakt --movies
 ```
 
 ## Examples
